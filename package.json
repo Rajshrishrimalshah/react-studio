@@ -1,5 +1,5 @@
 {
-  "name": "apollo-react-architecture",
+  "name": "react-studio",
   "version": "0.1.0",
   "private": true,
   "main": "build/Routes.js",
@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint"
+      "pre-commit": "npm run lint"
     }
   },
   "browserslist": [
