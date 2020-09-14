@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  height: 700px;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+}
+
+.left-side {
+  width: 30%;
+  border: 1px solid white;
+  margin-right: 1rem;
+}
+
+.center {
+  width: 70%;
+  border: 1px solid white;
+  margin-left: 1rem;
+}
+
+.right-side {
+  width: 20%;
+  border: 1px solid white;
+  margin-left: 1rem;
+}

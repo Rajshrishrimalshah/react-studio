@@ -1,13 +1,30 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { Dashboard, CreateProduct, ViewCart } from '../scenes';
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import { Dashboard } from '../modules';
 
-const Routes = () => (
-  <Switch>
-    <Route exact path="/dashboard/createProduct" component={CreateProduct} />
-    <Route exact path="/dashboard/viewCart" component={ViewCart} />
-    <Route path="/dashboard" component={Dashboard} />
-  </Switch>
-);
+const styles = {
+  root: {
+    margin: 0,
+    padding: 0,
+    boxSizing: 'border-box',
+  },
+};
 
-export default Routes;
+const Routes = (props) => {
+  const { classes } = props;
+  return (
+    <Switch>
+      <div className={classes.root}>
+        <Route path="/" component={Dashboard} />
+      </div>
+    </Switch>
+  );
+};
+
+export default withStyles(styles)(Routes);
+
+Routes.propTypes = {
+  classes: PropTypes.objectOf(PropTypes.any).isRequired,
+};
